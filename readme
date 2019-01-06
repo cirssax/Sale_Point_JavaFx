@@ -1,0 +1,8 @@
+# Sale_Point_JavaFx
+This Software It’s been made whit JavaFx. It’s need the following API’s (all are included on the proyect):
+•	FX-Icons
+•	Font – Awesome
+•	Jfoenix
+•	MySQL connector
+•	Mail
+Basically make the all administration por a little Sale Point and all that includes: users administrations, products administrations or provaiders administration, It’s the basic form of the aplicaction.
