@@ -1,0 +1,1371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" 
+            prefHeight="650.0" 
+            prefWidth="1200.0" 
+            styleClass="mainFxmlClass" 
+            xmlns="http://javafx.com/javafx/8.0.171" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="proyecto.MenuController">
+    <stylesheets>
+        <URL value="@/Estilos/EstilosMenu.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="PanelDerecho" 
+                  layoutX="277.0" 
+                  layoutY="113.0" 
+                  prefHeight="200.0" 
+                  prefWidth="200.0" 
+                  stylesheets="@../Estilos/EstilosMenu.css" 
+                  AnchorPane.bottomAnchor="0.0" 
+                  AnchorPane.leftAnchor="231.0" 
+                  AnchorPane.rightAnchor="0.0" 
+                  AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="PanelSolicitud" 
+                  fx:id="PanelSolicitud" 
+                  prefHeight="200.0" 
+                  prefWidth="200.0" 
+                  stylesheets="@../Estilos/EstilosMenu.css" 
+                  AnchorPane.bottomAnchor="0.0" 
+                  AnchorPane.leftAnchor="0.0" 
+                  AnchorPane.rightAnchor="0.0" 
+                  AnchorPane.topAnchor="0.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <JFXTreeTableView fx:id="ProductosSolcitud" 
+                                    layoutX="26.0" 
+                                    layoutY="105.0" 
+                                    prefHeight="440.0" 
+                                    prefWidth="270.0" 
+                                    stylesheets="@../Estilos/TablaProdSolicitud.css" />
+                  <JFXButton id="BtnSolicitudes" 
+                             fx:id="SelecProd" 
+                             layoutX="26.0" 
+                             layoutY="554.0" 
+                             onMouseClicked="#SelecProd" 
+                             stylesheets="@../Estilos/EstilosMenu.css" 
+                             text="Seleccionar Producto">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="86.0" 
+                         layoutY="31.0" 
+                         text="Lista de Productos ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTreeTableView fx:id="Distribuidores" 
+                                    layoutX="336.0" 
+                                    layoutY="105.0" 
+                                    prefHeight="440.0" 
+                                    prefWidth="406.0" 
+                                    stylesheets="@../Estilos/TablaDistSolicitud.css" />
+                  <Label layoutX="449.0" 
+                         layoutY="31.0" 
+                         text="Lista de Distribuidores">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton id="BtnSolicitudes" 
+                             fx:id="DistSelec" 
+                             layoutX="336.0" 
+                             layoutY="554.0" 
+                             onMouseClicked="#SelecDist" 
+                             prefHeight="37.0" 
+                             prefWidth="229.0" 
+                             stylesheets="@../Estilos/EstilosMenu.css" 
+                             text="Seleccionar Distribuidor">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXTextField id="DatosSolicitud" 
+                                fx:id="ProdSelec" 
+                                editable="false" 
+                                focusColor="BLACK" 
+                                labelFloat="true" 
+                                layoutX="760.0" 
+                                layoutY="416.0" 
+                                opacity="0.7" 
+                                prefHeight="37.0" 
+                                prefWidth="190.0" 
+                                promptText="Producto" 
+                                stylesheets="@../Estilos/EstilosMenu.css" 
+                                unFocusColor="BLACK">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField id="DatosSolicitud" 
+                                fx:id="DistribuidorSelec" 
+                                editable="false" 
+                                focusColor="BLACK" 
+                                labelFloat="true" 
+                                layoutX="760.0" 
+                                layoutY="495.0" 
+                                opacity="0.7" 
+                                prefHeight="37.0" 
+                                prefWidth="190.0" 
+                                promptText="Distribuidor" 
+                                stylesheets="@../Estilos/EstilosMenu.css" 
+                                unFocusColor="BLACK">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton id="BtnSolicitudes" 
+                             fx:id="BtnSolicitudPedido" 
+                             layoutX="760.0" 
+                             layoutY="547.0" 
+                             onMouseClicked="#RealizarSolicitud" 
+                             stylesheets="@../Estilos/EstilosMenu.css" 
+                             text="Realizar Solicitud">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton id="BtnSolicitudes" 
+                             fx:id="BtnAgregarDistribuidor" 
+                             layoutX="336.0" layoutY="605.0" 
+                             onMouseClicked="#CrearDistribuidor" 
+                             stylesheets="@../Estilos/EstilosMenu.css" 
+                             text="Añadir/Modificar Distribuidor">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXTextField id="DatosSolicitud" 
+                                fx:id="BuscarProdPedido" 
+                                focusColor="BLACK" 
+                                labelFloat="true" 
+                                layoutX="26.0" 
+                                layoutY="73.0" 
+                                onKeyReleased="#BusquedaInstantaneaProdSolicitud" 
+                                opacity="0.5" 
+                                prefHeight="30.0" 
+                                prefWidth="270.0" 
+                                promptText="Buscar Producto" 
+                                stylesheets="@../Estilos/EstilosMenu.css" 
+                                unFocusColor="BLACK">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField id="DatosSolicitud" 
+                                fx:id="BuscarDistPedido" 
+                                focusColor="BLACK" 
+                                labelFloat="true" 
+                                layoutX="334.0" 
+                                layoutY="73.0" 
+                                onKeyReleased="#BusquedaInstantenaDistSolicitud" 
+                                opacity="0.5" 
+                                prefHeight="30.0" 
+                                prefWidth="406.0" 
+                                promptText="Buscar Distribuidor" 
+                                stylesheets="@../Estilos/EstilosMenu.css" 
+                                unFocusColor="BLACK">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton id="BtnSolicitudes" 
+                             fx:id="BtnHistorialSolicitudes" 
+                             layoutX="760.0" 
+                             layoutY="598.0" 
+                             onMouseClicked="#HistorialSolicitudes" 
+                             prefHeight="31.0" 
+                             prefWidth="141.0" 
+                             stylesheets="@../Estilos/EstilosMenu.css" 
+                             text="Historial">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <AnchorPane id="PestSupSolicitud" 
+                              prefHeight="20.0" 
+                              prefWidth="969.0" 
+                              stylesheets="@../Estilos/EstilosMenu.css">
+                     <children>
+                        <Label layoutX="910.0" 
+                               layoutY="1.0" 
+                               opacity="0.85" 
+                               text="Solicitud" 
+                               textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <Pane id="PanelVenta" 
+                  fx:id="PanelVenta" 
+                  prefHeight="200.0" 
+                  prefWidth="200.0" 
+                  stylesheets="@../Estilos/EstilosMenu.css" 
+                  AnchorPane.bottomAnchor="0.0" 
+                  AnchorPane.leftAnchor="0.0" 
+                  AnchorPane.rightAnchor="0.0" 
+                  AnchorPane.topAnchor="0.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label layoutX="460.0" 
+                         layoutY="30.0" 
+                         opacity="0.77" 
+                         text="Productos" 
+                         textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <JFXTreeTableView fx:id="TablaProductosVenta" 
+                                    layoutX="354.0" 
+                                    layoutY="113.0" 
+                                    prefHeight="400.0" 
+                                    prefWidth="284.0" 
+                                    stylesheets="@../Estilos/TablasVentaCT.css" />
+                  <Label layoutX="148.0" 
+                         layoutY="30.0" 
+                         opacity="0.77" 
+                         text="Cliente" 
+                         textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <JFXTreeTableView fx:id="TablaCompraVenta" 
+                                    layoutX="665.0" 
+                                    layoutY="113.0" 
+                                    prefHeight="400.0" 
+                                    prefWidth="285.0" 
+                                    stylesheets="@../Estilos/TablaTotalPagar.css" />
+                  <Label layoutX="773.0" 
+                         layoutY="30.0" 
+                         opacity="0.77" 
+                         text="Carro" 
+                         textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="665.0" 
+                         layoutY="542.0" 
+                         opacity="0.77" 
+                         text="Total a pagar:" 
+                         textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label id="TotalAPagar" 
+                         fx:id="TotalPagar" 
+                         layoutX="787.0" 
+                         layoutY="542.0" 
+                         opacity="0.77" 
+                         prefHeight="27.0" 
+                         prefWidth="141.0" 
+                         stylesheets="@../Estilos/EstilosMenu.css" 
+                         text="0" 
+                         textAlignment="RIGHT" 
+                         textFill="WHITE" 
+                         wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton id="CrearUsuario" 
+                             fx:id="BtnCrearUsuario" 
+                             layoutX="36.0" 
+                             layoutY="599.0" 
+                             onMouseClicked="#CrearUsuario" 
+                             opacity="0.77" prefHeight="37.0" 
+                             prefWidth="198.0" 
+                             stylesheets="@../Estilos/EstilosMenu.css" 
+                             text="Crear/Editar Comprador">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXTreeTableView fx:id="TablaUsuariosVenta" 
+                                    layoutX="37.0" 
+                                    layoutY="113.0" 
+                                    prefHeight="400.0" 
+                                    prefWidth="270.0" 
+                                    stylesheets="@../Estilos/TablasVentaCT.css" />
+                  <JFXButton id="CrearUsuario" 
+                             fx:id="Pagar" 
+                             layoutX="625.0" 
+                             layoutY="599.0" 
+                             onMouseClicked="#Pagar" 
+                             opacity="0.77" 
+                             prefHeight="37.0" 
+                             prefWidth="148.0" 
+                             stylesheets="@../Estilos/EstilosMenu.css" 
+                             text="Pagar">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton id="CrearUsuario" 
+                             fx:id="BtnAgregarProductoVenta" 
+                             layoutX="353.0" 
+                             layoutY="599.0" 
+                             onMouseClicked="#SelecProductosCompra" 
+                             opacity="0.77" 
+                             prefHeight="37.0" 
+                             prefWidth="180.0" 
+                             stylesheets="@../Estilos/EstilosMenu.css" 
+                             text="Seleccionar Producto">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton id="CrearUsuario" 
+                             fx:id="BtnSelecClienteVenta" 
+                             layoutX="37.0" 
+                             layoutY="542.0" 
+                             onMouseClicked="#SelecClienteCompra" 
+                             opacity="0.77" 
+                             prefHeight="37.0" 
+                             prefWidth="198.0" 
+                             stylesheets="@../Estilos/EstilosMenu.css" 
+                             text="Seleccionar Comprador">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXTextField id="BuscarClienteCompra" 
+                                fx:id="BusquedaClienteCompra" 
+                                focusColor="WHITE" 
+                                labelFloat="true" 
+                                layoutX="35.0" 
+                                layoutY="79.0" 
+                                onKeyReleased="#BusquedaInstantaneaClienteCompra" 
+                                opacity="0.77" 
+                                prefHeight="25.0" 
+                                prefWidth="270.0" 
+                                promptText="Buscar Cliente" 
+                                stylesheets="@../Estilos/EstilosMenu.css" 
+                                unFocusColor="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField id="BuscarClienteCompra" 
+                                fx:id="BusquedaProdCompra" 
+                                focusColor="WHITE" 
+                                labelFloat="true" 
+                                layoutX="353.0" 
+                                layoutY="79.0" 
+                                onKeyReleased="#BusquedaInstantaneaProdCompra" 
+                                opacity="0.77" 
+                                prefHeight="25.0" 
+                                prefWidth="284.0" 
+                                promptText="Buscar Producto" 
+                                stylesheets="@../Estilos/EstilosMenu.css" 
+                                unFocusColor="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton id="CrearUsuario" 
+                             fx:id="BtnEliminarProdCompra" 
+                             layoutX="802.0" 
+                             layoutY="599.0" 
+                             onMouseClicked="#EliminarCompra" 
+                             opacity="0.77" 
+                             stylesheets="@../Estilos/EstilosMenu.css" 
+                             text="Eliminar Producto">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXTextField id="BuscarClienteCompra" 
+                                fx:id="CantidadProd" 
+                                focusColor="WHITE" 
+                                labelFloat="true" 
+                                layoutX="353.0" 
+                                layoutY="537.0" 
+                                onKeyReleased="#CantidadProdCompra" 
+                                opacity="0.77" 
+                                prefHeight="25.0" 
+                                prefWidth="180.0" 
+                                promptText="Cantidad del Producto" 
+                                stylesheets="@../Estilos/EstilosMenu.css" 
+                                unFocusColor="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <FontAwesomeIconView fill="WHITE" 
+                                       glyphName="SHOPPING_CART" 
+                                       layoutX="834.0" 
+                                       layoutY="51.0" 
+                                       opacity="0.77" 
+                                       size="25" />
+                  <AnchorPane id="PestSupVentas" 
+                              prefHeight="20.0" 
+                              prefWidth="969.0" 
+                              stylesheets="@../Estilos/EstilosMenu.css">
+                     <children>
+                        <Label layoutX="924.0" 
+                               layoutY="1.0" 
+                               opacity="0.84" 
+                               text="Venta" 
+                               textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <Pane id="PanelBuscar" 
+                  fx:id="PanelBusqueda" 
+                  onMouseMoved="#ResetearDescripBusqueda" 
+                  prefHeight="200.0" 
+                  prefWidth="200.0" 
+                  stylesheets="@../Estilos/EstilosMenu.css" 
+                  AnchorPane.bottomAnchor="0.0" 
+                  AnchorPane.leftAnchor="0.0" 
+                  AnchorPane.rightAnchor="0.0" 
+                  AnchorPane.topAnchor="0.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <JFXTextField id="BusquedaProducto" 
+                                fx:id="BusquedaNombreProd" 
+                                focusColor="BLACK" 
+                                labelFloat="true" 
+                                layoutX="37.0" 
+                                layoutY="39.0" 
+                                onKeyReleased="#BusquedaInstantaneaNombre" 
+                                onMouseMoved="#DescripcionBusqueda1" 
+                                opacity="0.8" 
+                                prefHeight="39.0" 
+                                prefWidth="263.0" 
+                                promptText="Busqueda por Nombre Producto" 
+                                stylesheets="@../Estilos/EstilosMenu.css" 
+                                unFocusColor="BLACK">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField id="BusquedaProducto" 
+                                fx:id="BusquedaTipoProd" 
+                                focusColor="BLACK" 
+                                labelFloat="true" 
+                                layoutX="376.0" 
+                                layoutY="39.0" 
+                                onKeyReleased="#BusquedaInstantaneaTipo" 
+                                onMouseMoved="#DescripcionBusqueda2" 
+                                opacity="0.8" 
+                                prefHeight="39.0" 
+                                prefWidth="263.0" 
+                                promptText="Busqueda por Tipo Producto" 
+                                stylesheets="@../Estilos/EstilosMenu.css" 
+                                unFocusColor="BLACK">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton id="BtnOpcionesBusqueda" 
+                             fx:id="ModficarProd" 
+                             layoutX="720.0" 
+                             layoutY="184.0" 
+                             onMouseClicked="#EditarProd" 
+                             onMouseMoved="#DescripModificacionProducto" 
+                             prefHeight="37.0" 
+                             prefWidth="209.0" 
+                             stylesheets="@../Estilos/EstilosMenu.css" 
+                             text="Modificar Producto">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton id="BtnOpcionesBusqueda" 
+                             fx:id="BuscarCompras" 
+                             layoutX="720.0" 
+                             layoutY="250.0" 
+                             onMouseClicked="#BuscarCompra" 
+                             onMouseMoved="#DescripBusquedaCompras" 
+                             stylesheets="@../Estilos/EstilosMenu.css" 
+                             text="Buscar Compras realizadas">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton id="BtnOpcionesBusqueda" 
+                             fx:id="AgregarProd" 
+                             layoutX="722.0" 
+                             layoutY="317.0" 
+                             onMouseClicked="#AgregarProd" 
+                             onMouseMoved="#DescripAgregarProd" 
+                             prefHeight="37.0" 
+                             prefWidth="209.0" 
+                             stylesheets="@../Estilos/EstilosMenu.css" 
+                             text="Añadir Producto">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="764.0" 
+                         layoutY="120.0" 
+                         text="Otras Opciones">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="DescripOpcBusqueda" 
+                         layoutX="717.0" 
+                         layoutY="393.0" 
+                         opacity="0.77" 
+                         prefHeight="193.0" 
+                         prefWidth="218.0" 
+                         text="Deslice por alguna opcion para obtener una breve descripcion" 
+                         textAlignment="CENTER" 
+                         wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTreeTableView id="TablaBusquedaProd" 
+                                    fx:id="TablaRespuestaBusqueda" 
+                                    layoutX="147.0" 
+                                    layoutY="102.0" 
+                                    prefHeight="524.0" 
+                                    prefWidth="441.0" 
+                                    stylesheets="@../Estilos/EstiloTablaBusquedaProd.css" />
+                  <AnchorPane id="PestSupBusqueda" 
+                              prefHeight="20.0" 
+                              prefWidth="969.0" 
+                              stylesheets="@../Estilos/EstilosMenu.css">
+                     <children>
+                        <Label layoutX="902.0" 
+                               layoutY="1.0" 
+                               opacity="0.98" 
+                               text="Busqueda" 
+                               textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children></Pane>
+            <Pane id="PanelConsultas" 
+                  fx:id="PanelConsultas" 
+                  prefHeight="200.0" 
+                  prefWidth="200.0" 
+                  stylesheets="@../Estilos/EstilosMenu.css" 
+                  AnchorPane.bottomAnchor="0.0" 
+                  AnchorPane.leftAnchor="0.0" 
+                  AnchorPane.rightAnchor="0.0" 
+                  AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXTextArea id="DescripConsulta" 
+                               fx:id="ConsultaProblema" 
+                               focusColor="WHITE" 
+                               labelFloat="true" 
+                               layoutX="204.0" 
+                               layoutY="178.0" 
+                               onKeyReleased="#ControlLargo" 
+                               opacity="0.73" 
+                               prefHeight="129.0" 
+                               prefWidth="502.0" 
+                               promptText="Describa el fallo aqui" 
+                               stylesheets="@../Estilos/EstilosMenu.css" 
+                               unFocusColor="WHITE" 
+                               wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextArea>
+                  <Label layoutX="233.0" 
+                         layoutY="58.0" 
+                         text="Redacte de la manera mas clara posible el fallo ocurrido" 
+                         textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LargoTexto" 
+                         layoutX="608.0" 
+                         layoutY="325.0" 
+                         prefHeight="20.0" 
+                         prefWidth="98.0" 
+                         textFill="WHITE" 
+                         wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXButton id="BtnEnviarConsulta" 
+                             fx:id="BtnEnviarConsulta" 
+                             layoutX="390.0" 
+                             layoutY="384.0" 
+                             onMouseClicked="#EnviarConsulta" 
+                             prefHeight="30.0" 
+                             prefWidth="130.0" 
+                             stylesheets="@../Estilos/EstilosMenu.css" 
+                             text="Enviar">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="MensajeError" 
+                         layoutX="294.0" 
+                         layoutY="463.0" 
+                         opacity="0.7" 
+                         prefHeight="129.0" 
+                         prefWidth="323.0" 
+                         textAlignment="CENTER" 
+                         textFill="WHITE" 
+                         wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane id="PestSupConsultas" 
+                              prefHeight="20.0" 
+                              prefWidth="969.0" 
+                              stylesheets="@../Estilos/EstilosMenu.css">
+                     <children>
+                        <Label layoutX="851.0" 
+                               layoutY="1.0" 
+                               opacity="0.94" 
+                               text="Consultas/Soporte" 
+                               textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <AnchorPane id="PanelEstadistica" 
+                        fx:id="PanelEstadistica" 
+                        prefHeight="650.0" 
+                        prefWidth="969.0" 
+                        stylesheets="@../Estilos/EstilosMenu.css">
+               <children>
+                  <AnchorPane id="PanelSelector" 
+                              prefHeight="650.0" 
+                              prefWidth="171.0" 
+                              stylesheets="@../Estilos/EstilosGraficos.css">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <AnchorPane id="BarraLatIzq" 
+                                    layoutX="1.0" 
+                                    prefHeight="650.0" 
+                                    prefWidth="34.0" 
+                                    stylesheets="@../Estilos/EstilosGraficos.css">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </AnchorPane>
+                        <JFXButton id="BtnOpciones" 
+                                   fx:id="BtnEstProductos" 
+                                   layoutX="1.0" 
+                                   layoutY="259.0" 
+                                   onMouseClicked="#PanelEstProductos" 
+                                   prefHeight="37.0" 
+                                   prefWidth="190.0" 
+                                   stylesheets="@../Estilos/EstilosGraficos.css" 
+                                   text="Productos">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton id="BtnOpciones" 
+                                   layoutX="1.0" 
+                                   layoutY="295.0" 
+                                   onMouseClicked="#PanelEstTrabajadores" 
+                                   prefHeight="37.0" 
+                                   prefWidth="190.0" 
+                                   stylesheets="@../Estilos/EstilosGraficos.css" 
+                                   text="Vendedores">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton id="BtnOpciones" 
+                                   fx:id="BtnHorasTrabajadas" 
+                                   layoutX="1.0" 
+                                   layoutY="331.0" 
+                                   onMouseClicked="#PanelHoras" 
+                                   prefHeight="37.0" 
+                                   prefWidth="190.0" 
+                                   text="    Horas trabajadas">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <FontAwesomeIconView glyphName="CUBES" 
+                                             layoutX="9.0" 
+                                             layoutY="283.0" 
+                                             size="16" />
+                        <FontAwesomeIconView glyphName="USERS" 
+                                             layoutX="11.0" 
+                                             layoutY="319.0" 
+                                             size="16" />
+                        <FontAwesomeIconView glyphName="BOOK" 
+                                             layoutX="12.0" 
+                                             layoutY="355.0" 
+                                             size="16" />
+                        <AnchorPane id="PestSupEstadistica" 
+                                    layoutX="35.0" 
+                                    prefHeight="20.0" 
+                                    prefWidth="158.0" 
+                                    stylesheets="@../Estilos/EstilosMenu.css">
+                           <children>
+                              <Label layoutX="80.0" 
+                                     layoutY="1.0" 
+                                     opacity="0.91" 
+                                     text="Estadisticas" 
+                                     textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <Pane id="PanelEstVendedores" 
+                        fx:id="PaneEstTrab" 
+                        layoutX="192.0" 
+                        prefHeight="650.0" 
+                        prefWidth="777.0" 
+                        stylesheets="@../Estilos/EstilosGraficos.css" 
+                        AnchorPane.bottomAnchor="0.0" 
+                        AnchorPane.leftAnchor="192.0" 
+                        AnchorPane.rightAnchor="0.0" 
+                        AnchorPane.topAnchor="0.0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <JFXTextField id="BuscarTrabajador" 
+                                      fx:id="InputTrabajadorEst" 
+                                      focusColor="BLACK" 
+                                      labelFloat="true" 
+                                      layoutX="19.0" 
+                                      layoutY="28.0" 
+                                      onKeyReleased="#BusquedaInstantaneaTrabajadores" 
+                                      opacity="0.6" 
+                                      prefHeight="30.0" 
+                                      prefWidth="323.0" 
+                                      promptText="Buscar Trabajador" 
+                                      stylesheets="@../Estilos/EstilosGraficos.css" 
+                                      unFocusColor="BLACK">
+                           <font>
+                              <Font size="14.0" />
+                           </font></JFXTextField>
+                        <BarChart fx:id="GraficoTrabajadoresEst" 
+                                  layoutX="19.0" 
+                                  layoutY="224.0" 
+                                  prefHeight="422.0" 
+                                  prefWidth="744.0" 
+                                  stylesheets="@../Estilos/Graficos.css" 
+                                  title="Estadistica Trabajadores">
+                          <xAxis>
+                            <CategoryAxis fx:id="EjeXTbjdrs" 
+                                          side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="EjeYTbjdrs" 
+                                        side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                        <JFXTreeTableView fx:id="TablaTrabajadoresEst" 
+                                          layoutX="19.0" 
+                                          layoutY="62.0" 
+                                          prefHeight="164.0" 
+                                          prefWidth="323.0" 
+                                          stylesheets="@../Estilos/TablaDistSolicitud.css" />
+                        <JFXButton id="BtnSelecTrabajador" 
+                                   fx:id="BtnSeleccionTbjd" 
+                                   layoutX="406.0" 
+                                   layoutY="64.0" 
+                                   onMouseClicked="#SelecTrabajadorEst" 
+                                   prefHeight="30.0" 
+                                   prefWidth="108.0" 
+                                   stylesheets="@../Estilos/EstilosGraficos.css" 
+                                   text="Seleccionar">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextField id="BuscarTrabajador" 
+                                      fx:id="Trabajador2" 
+                                      editable="false" 
+                                      focusColor="BLACK" 
+                                      labelFloat="true" 
+                                      layoutX="570.0" 
+                                      layoutY="119.0" 
+                                      opacity="0.62" 
+                                      prefHeight="25.0" 
+                                      prefWidth="171.0" 
+                                      promptText="Trabajador 2" 
+                                      stylesheets="@../Estilos/EstilosGraficos.css" 
+                                      unFocusColor="BLACK">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField id="BuscarTrabajador" 
+                                      fx:id="Trabajador3" 
+                                      editable="false" 
+                                      focusColor="BLACK" 
+                                      labelFloat="true" 
+                                      layoutX="570.0" 
+                                      layoutY="179.0" 
+                                      opacity="0.62" 
+                                      prefHeight="25.0" 
+                                      prefWidth="171.0" 
+                                      promptText="Trabajador 3" 
+                                      stylesheets="@../Estilos/EstilosGraficos.css" 
+                                      unFocusColor="BLACK">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField id="BuscarTrabajador" 
+                                      fx:id="Trabajador1" 
+                                      editable="false" 
+                                      focusColor="BLACK" 
+                                      labelFloat="true" 
+                                      layoutX="570.0" 
+                                      layoutY="62.0" 
+                                      opacity="0.62" 
+                                      prefHeight="25.0" 
+                                      prefWidth="171.0" 
+                                      promptText="Trabajador 1" 
+                                      stylesheets="@../Estilos/EstilosGraficos.css" 
+                                      unFocusColor="BLACK">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton id="BtnSelecTrabajador" 
+                                   fx:id="Limpiar" 
+                                   layoutX="406.0" 
+                                   layoutY="122.0" 
+                                   onMouseClicked="#Clear" 
+                                   prefHeight="30.0" 
+                                   prefWidth="108.0" 
+                                   stylesheets="@../Estilos/EstilosGraficos.css" 
+                                   text="Limpiar">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="19.0" 
+                               layoutY="234.0" 
+                               text="Dinero ($)" 
+                               textFill="#727070">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="717.0" 
+                               layoutY="624.0" 
+                               text="Empleado" 
+                               textFill="#616161">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane id="PestEstVendedores" 
+                                    prefHeight="20.0" 
+                                    prefWidth="777.0" 
+                                    stylesheets="@../Estilos/EstilosGraficos.css">
+                           <children>
+                              <Label layoutX="698.0" 
+                                     layoutY="1.0" 
+                                     opacity="0.7" 
+                                     text="Vendedores">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </Pane>
+                  <Pane id="PanelEstProd" 
+                        fx:id="PaneEstProd" 
+                        layoutX="226.0" 
+                        layoutY="3.0" 
+                        prefHeight="650.0" 
+                        prefWidth="743.0" 
+                        stylesheets="@../Estilos/EstilosGraficos.css" 
+                        AnchorPane.bottomAnchor="0.0" 
+                        AnchorPane.leftAnchor="192.0" 
+                        AnchorPane.rightAnchor="0.0" 
+                        AnchorPane.topAnchor="0.0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <LineChart fx:id="GraficoProductos" 
+                                   layoutY="105.0" 
+                                   prefHeight="489.0" 
+                                   prefWidth="777.0" 
+                                   stylesheets="@../Estilos/Graficos.css" 
+                                   title="Estadistica de Venta de Productos">
+                          <xAxis>
+                            <CategoryAxis fx:id="EjeXProductos" 
+                                          side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="EjeYProd" 
+                                        side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <JFXComboBox id="ComboBoxes" 
+                                     fx:id="ComboProd1" 
+                                     layoutX="42.0" 
+                                     layoutY="26.0" 
+                                     prefHeight="25.0" 
+                                     prefWidth="148.0" 
+                                     promptText="Producto" 
+                                     stylesheets="@../Estilos/EstilosGraficos.css" />
+                        <JFXComboBox id="ComboBoxes" 
+                                     fx:id="ComboProd3" 
+                                     layoutX="615.0" 
+                                     layoutY="26.0" 
+                                     prefHeight="25.0" 
+                                     prefWidth="148.0" 
+                                     promptText="Producto" 
+                                     stylesheets="@../Estilos/EstilosGraficos.css" />
+                        <JFXComboBox id="ComboBoxes" 
+                                     fx:id="ComboProd2" 
+                                     layoutX="315.0" 
+                                     layoutY="26.0" 
+                                     prefHeight="25.0" 
+                                     prefWidth="148.0" 
+                                     promptText="Producto" 
+                                     stylesheets="@../Estilos/EstilosGraficos.css" />
+                        <JFXButton id="BtnSeleccion" 
+                                   layoutX="42.0" 
+                                   layoutY="67.0" 
+                                   onMouseClicked="#Producto1" 
+                                   prefHeight="25.0" 
+                                   prefWidth="151.0" 
+                                   stylesheets="@../Estilos/EstilosGraficos.css" 
+                                   text="Seleccionar">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton id="BtnSeleccion" 
+                                   layoutX="313.0" 
+                                   layoutY="67.0" 
+                                   onMouseClicked="#Producto2" 
+                                   prefHeight="25.0" 
+                                   prefWidth="151.0" 
+                                   stylesheets="@../Estilos/EstilosGraficos.css" 
+                                   text="Seleccionar">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton id="BtnSeleccion" 
+                                   layoutX="614.0" 
+                                   layoutY="67.0" 
+                                   onMouseClicked="#Producto3" 
+                                   prefHeight="25.0" 
+                                   prefWidth="151.0" 
+                                   stylesheets="@../Estilos/EstilosGraficos.css" 
+                                   text="Seleccionar">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton id="BtnSeleccion" 
+                                   fx:id="Clean" 
+                                   layoutX="347.0" 
+                                   layoutY="594.0" 
+                                   onMouseClicked="#Limpiar" 
+                                   prefHeight="30.0" 
+                                   prefWidth="84.0" 
+                                   stylesheets="@../Estilos/EstilosGraficos.css" 
+                                   text="Limpiar">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="14.0" 
+                               layoutY="117.0" 
+                               opacity="0.73" 
+                               text="Cantidad" 
+                               textFill="WHITE" />
+                        <Label layoutX="735.0" 
+                               layoutY="577.0" 
+                               opacity="0.73" 
+                               text="Meses" 
+                               textFill="WHITE" />
+                        <AnchorPane id="PestEstProductos" 
+                                    prefHeight="20.0" 
+                                    prefWidth="777.0" 
+                                    stylesheets="@../Estilos/EstilosGraficos.css">
+                           <children>
+                              <Label layoutX="709.0" 
+                                     layoutY="1.0" 
+                                     opacity="0.84" 
+                                     text="Productos" 
+                                     textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </Pane>
+                  <Pane id="PanelTurnos" 
+                        fx:id="PabelHoras" 
+                        prefHeight="200.0" 
+                        prefWidth="200.0" 
+                        stylesheets="@../Estilos/EstilosGraficos.css" 
+                        AnchorPane.bottomAnchor="0.0" 
+                        AnchorPane.leftAnchor="192.0" 
+                        AnchorPane.rightAnchor="0.0" 
+                        AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXTreeTableView fx:id="TablaPersonasTurnos" 
+                                          layoutX="11.0" layoutY="120.0" 
+                                          onMouseClicked="#LlenarTablaDeTurnos" 
+                                          prefHeight="467.0" 
+                                          prefWidth="323.0" 
+                                          stylesheets="@../Estilos/TablaHorarios1.css" />
+                        <JFXTreeTableView fx:id="TablaHorariosPersona" 
+                                          layoutX="345.0" 
+                                          layoutY="120.0" 
+                                          prefHeight="467.0" 
+                                          prefWidth="424.0" 
+                                          stylesheets="@../Estilos/TablaHorarios2.css" />
+                        <JFXTextField id="InputNombreTurnos" 
+                                      fx:id="NombreTrabajadorHorarios" 
+                                      focusColor="BLACK" 
+                                      labelFloat="true" 
+                                      layoutX="14.0" 
+                                      layoutY="50.0" 
+                                      onKeyReleased="#BusquedaInstantaneaTrabajador2" 
+                                      opacity="0.8" 
+                                      prefHeight="37.0" 
+                                      prefWidth="263.0" 
+                                      promptText="Buscar por Nombre" 
+                                      stylesheets="@../Estilos/EstilosGraficos.css" 
+                                      unFocusColor="BLACK">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label layoutX="151.0" 
+                               layoutY="93.0" 
+                               opacity="0.57" 
+                               text="Turnos">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="491.0" 
+                               layoutY="93.0" 
+                               opacity="0.57" 
+                               text="Descripcion del turno">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="376.0" 
+                               layoutY="601.0" 
+                               text="Horas trabajadas este mes:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="HorasTrabajadas" 
+                               layoutX="602.0" 
+                               layoutY="601.0" 
+                               prefHeight="20.0" 
+                               prefWidth="132.0" 
+                               wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane id="PestEstTurnos" 
+                                    prefHeight="20.0" 
+                                    prefWidth="777.0" 
+                                    stylesheets="@../Estilos/EstilosGraficos.css">
+                           <children>
+                              <Label layoutX="668.0" 
+                                     layoutY="1.0" 
+                                     opacity="0.7" 
+                                     text="Horas Trabajadas">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <Pane id="PanelPrincipal" 
+                  fx:id="PanelPrincipal" 
+                  onMouseMoved="#Resetear" 
+                  prefHeight="200.0" 
+                  prefWidth="200.0" 
+                  stylesheets="@../Estilos/EstilosMenu.css" 
+                  AnchorPane.bottomAnchor="0.0" 
+                  AnchorPane.leftAnchor="0.0" 
+                  AnchorPane.rightAnchor="0.0" 
+                  AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label id="Descripciones" 
+                         fx:id="Texto" 
+                         layoutX="124.0" 
+                         layoutY="111.0" 
+                         opacity="0.7" 
+                         prefHeight="440.0" 
+                         prefWidth="756.0" 
+                         stylesheets="@../Estilos/EstilosMenu.css" 
+                         text="Deslice sobre los botones para obtener descripcion de lo que hace cada uno" 
+                         textAlignment="JUSTIFY" 
+                         wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="440.0" 
+                         layoutY="69.0" 
+                         text="DESCRIPCION">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane id="PestSupDescripciones" 
+                              prefHeight="20.0" 
+                              prefWidth="969.0" 
+                              stylesheets="@../Estilos/EstilosMenu.css">
+                     <children>
+                        <Label layoutX="910.0" 
+                               layoutY="1.0" 
+                               opacity="0.7" 
+                               text="Principal">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane id="PanelIzq" 
+                  fx:id="Pane1" 
+                  layoutX="14.0" 
+                  onMouseMoved="#Resetear" 
+                  prefHeight="650.0" 
+                  prefWidth="231.0" 
+                  stylesheets="@../Estilos/EstilosMenu.css" 
+                  AnchorPane.bottomAnchor="0.0" 
+                  AnchorPane.leftAnchor="0.0" 
+                  AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <JFXButton id="Buton" 
+                       fx:id="BtnPrincipal" 
+                       alignment="BASELINE_CENTER" 
+                       layoutX="3.0" 
+                       layoutY="242.0" 
+                       onMouseClicked="#PanelPrincipal" 
+                       onMouseMoved="#Resetear" 
+                       prefHeight="40.0" 
+                       prefWidth="231.0" 
+                       stylesheets="@../Estilos/EstilosMenu.css" 
+                       text="Principal">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="Buton" 
+                       fx:id="BtnVenta" 
+                       alignment="BASELINE_CENTER" 
+                       layoutX="3.0" 
+                       layoutY="282.0" 
+                       onMouseClicked="#PanelVenta" 
+                       onMouseMoved="#DescripcionVenta" 
+                       prefHeight="40.0" 
+                       prefWidth="231.0" 
+                       stylesheets="@../Estilos/EstilosMenu.css" 
+                       text="Venta">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="Buton" 
+                       fx:id="BtnSolicitud" 
+                       alignment="BASELINE_CENTER" 
+                       layoutX="3.0" 
+                       layoutY="322.0" 
+                       onMouseClicked="#PanelSolicitud" 
+                       onMouseMoved="#DescripcionSolicitud" 
+                       prefHeight="40.0" 
+                       prefWidth="231.0" 
+                       stylesheets="@../Estilos/EstilosMenu.css" 
+                       text="Solicitud">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="Buton" 
+                       fx:id="BtnBusqueda" 
+                       alignment="BASELINE_CENTER" 
+                       layoutX="3.0" 
+                       layoutY="362.0" 
+                       onMouseClicked="#PanelBusqueda" 
+                       onMouseMoved="#DescripcionBusqueda" 
+                       prefHeight="40.0" 
+                       prefWidth="231.0" 
+                       stylesheets="@../Estilos/EstilosMenu.css" 
+                       text="Buscar">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="Buton" 
+                       fx:id="BtnEstadistica" 
+                       alignment="BASELINE_CENTER" 
+                       layoutX="3.0" 
+                       layoutY="402.0" 
+                       onMouseClicked="#PanelEstadistica" 
+                       onMouseMoved="#DescripcionEstadisticas" 
+                       prefHeight="40.0" 
+                       prefWidth="231.0" 
+                       stylesheets="@../Estilos/EstilosMenu.css" 
+                       text="Estadisticas">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="Buton" 
+                       fx:id="BtnConsultas" 
+                       alignment="BASELINE_CENTER" 
+                       layoutX="3.0" 
+                       layoutY="442.0" 
+                       onMouseClicked="#PanelConsutlas" 
+                       onMouseMoved="#DescripConsultas" 
+                       prefHeight="40.0" 
+                       prefWidth="231.0" 
+                       stylesheets="@../Estilos/EstilosMenu.css" 
+                       text="    Consultas/Soporte">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="Buton" 
+                       fx:id="Boton" 
+                       alignment="BASELINE_CENTER" 
+                       onMouseClicked="#CerrarVentana" 
+                       onMouseMoved="#DescripcionVolver" 
+                       prefHeight="40.0" 
+                       prefWidth="234.0" 
+                       stylesheets="@../Estilos/EstilosMenu.css" 
+                       text="Salir">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <AnchorPane id="LatIzq" 
+                        fx:id="Pane2" 
+                        layoutX="6.0" 
+                        layoutY="14.0" 
+                        onMouseMoved="#Resetear" 
+                        prefHeight="650.0" 
+                        prefWidth="34.0" 
+                        stylesheets="@../Estilos/EstilosMenu.css" 
+                        AnchorPane.bottomAnchor="0.0" 
+                        AnchorPane.leftAnchor="0.0" 
+                        AnchorPane.topAnchor="0.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <FontAwesomeIconView glyphName="BARS" 
+                                 layoutX="9.0" 
+                                 layoutY="269.0" 
+                                 size="20" />
+            <FontAwesomeIconView glyphName="SHOPPING_CART" 
+                                 layoutX="7.0" 
+                                 layoutY="306.0" 
+                                 size="20" />
+            <FontAwesomeIconView glyphName="TRUCK" 
+                                 layoutX="7.0" 
+                                 layoutY="349.0" 
+                                 size="20" />
+            <FontAwesomeIconView glyphName="SEARCH" 
+                                 layoutX="8.0" 
+                                 layoutY="389.0" 
+                                 size="20" />
+            <FontAwesomeIconView glyphName="BAR_CHART" 
+                                 layoutX="6.0" 
+                                 layoutY="429.0" 
+                                 size="20" />
+            <FontAwesomeIconView glyphName="CHEVRON_LEFT" 
+                                 layoutX="9.0" 
+                                 layoutY="27.0" 
+                                 size="20" />
+            <FontAwesomeIconView glyphName="QUESTION_CIRCLE" 
+                                 layoutX="8.0" 
+                                 layoutY="469.0" 
+                                 size="20" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

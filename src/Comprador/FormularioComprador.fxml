@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="PanelFondoUsuario" 
+            prefHeight="471.0" 
+            prefWidth="365.0" 
+            stylesheets="@../Estilos/EstilosMenu.css" 
+            xmlns="http://javafx.com/javafx/9.0.1" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="Comprador.FormularioCompradorController">
+   <children>
+      <JFXTextField id="DatosUsuario" 
+                    fx:id="Nombre" 
+                    focusColor="BLACK" 
+                    labelFloat="true" 
+                    layoutX="48.0" 
+                    layoutY="62.0" 
+                    opacity="0.63" 
+                    prefHeight="37.0" 
+                    prefWidth="269.0" 
+                    promptText="Nombre" 
+                    stylesheets="@../Estilos/EstilosMenu.css" 
+                    unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField id="DatosUsuario" 
+                    fx:id="Fono" 
+                    focusColor="BLACK" 
+                    labelFloat="true" 
+                    layoutX="48.0" 
+                    layoutY="138.0" 
+                    opacity="0.63" 
+                    prefHeight="37.0" 
+                    prefWidth="269.0" 
+                    promptText="Fono" 
+                    stylesheets="@../Estilos/EstilosMenu.css" 
+                    unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField id="DatosUsuario" 
+                    fx:id="Correo" 
+                    focusColor="BLACK" 
+                    labelFloat="true" 
+                    layoutX="48.0" 
+                    layoutY="217.0" 
+                    opacity="0.63" 
+                    prefHeight="37.0" 
+                    prefWidth="269.0" 
+                    promptText="Correo" 
+                    stylesheets="@../Estilos/EstilosMenu.css" 
+                    unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton id="BotonCrearUsuario" 
+                 fx:id="BtnAceptar" 
+                 layoutX="93.0" 
+                 layoutY="400.0" 
+                 onMouseClicked="#Aceptar" 
+                 prefHeight="25.0" 
+                 prefWidth="180.0" 
+                 stylesheets="@../Estilos/EstilosMenu.css" 
+                 text="Crear">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="ComboEstadoCliente" 
+                   layoutX="48.0" 
+                   layoutY="314.0" 
+                   prefHeight="25.0" 
+                   prefWidth="269.0" 
+                   promptText="Estado Cliente" />
+      <AnchorPane id="PestCrearUsr" 
+                  prefHeight="27.0" 
+                  prefWidth="365.0" 
+                  stylesheets="@../Estilos/EstilosMenu.css">
+         <children>
+            <FontAwesomeIconView fill="WHITE" 
+                                 glyphName="TIMES" 
+                                 layoutX="340.0" 
+                                 layoutY="23.0" 
+                                 onMouseClicked="#CerrarVentana" 
+                                 size="25" />
+            <Label layoutX="11.0" 
+                   layoutY="1.0" 
+                   text="Crear Nuevo Usuario" 
+                   textAlignment="CENTER" 
+                   textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

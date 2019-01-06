@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AccesoCorrectoSimple" 
+            prefHeight="204.0" 
+            prefWidth="295.0" 
+            stylesheets="@../Estilos/EstiloAlertas.css" 
+            xmlns="http://javafx.com/javafx/9.0.1" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="Alertas.AccesoCorrectoSimpleController">
+   <children>
+      <Label id="Txt" 
+             fx:id="Texto" 
+             layoutX="70.0" 
+             layoutY="52.0" 
+             prefHeight="61.0" 
+             prefWidth="154.0" 
+             stylesheets="@../Estilos/EstiloAlertas.css" 
+             text="Datos Correctos" textAlignment="CENTER" 
+             wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXButton id="BotonAccesoSimple" 
+                 fx:id="Boton" 
+                 layoutX="71.0" 
+                 layoutY="129.0" 
+                 onMouseClicked="#CerrarVentana" 
+                 prefHeight="25.0" 
+                 prefWidth="154.0" 
+                 stylesheets="@../Estilos/EstiloAlertas.css" 
+                 text="Aceptar">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane id="PestAlertaCorrectaSimple" 
+                  prefHeight="25.0" 
+                  prefWidth="295.0" 
+                  stylesheets="@../Estilos/EstiloAlertas.css">
+         <children>
+            <FontAwesomeIconView fill="WHITE" 
+                                 glyphName="CHECK_CIRCLE" 
+                                 layoutX="268.0" 
+                                 layoutY="19.0" 
+                                 size="20" />
+            <Label layoutX="10.0" 
+                   layoutY="1.0" 
+                   text="Alerta" 
+                   textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="FondoHistSolicitudes" 
+            prefHeight="520.0" 
+            prefWidth="738.0" 
+            stylesheets="@../Estilos/EstilosMenu.css" 
+            xmlns="http://javafx.com/javafx/9.0.1" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="Distribuidor.HistorialSolicitudesController">
+   <children>
+      <JFXTextField id="InputProdHistorialSolicitudes" 
+                    fx:id="InputProdHistorialSolicitudes" 
+                    focusColor="WHITE" 
+                    labelFloat="true" 
+                    layoutX="29.0" 
+                    layoutY="66.0" 
+                    onKeyReleased="#BusquedaInstantaneaHistorial" 
+                    opacity="0.8" 
+                    prefHeight="37.0" 
+                    prefWidth="256.0" 
+                    promptText="Buscar por Producto" 
+                    stylesheets="@../Estilos/EstilosMenu.css" 
+                    unFocusColor="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTreeTableView fx:id="TablaSolicitudes" 
+                        layoutX="55.0" 
+                        layoutY="134.0" 
+                        prefHeight="352.0" 
+                        prefWidth="630.0" 
+                        stylesheets="@../Estilos/TablasVentaCT.css" />
+      <AnchorPane id="PestHistorialSol" 
+                  layoutY="-1.0" 
+                  prefHeight="30.0" 
+                  prefWidth="739.0" 
+                  stylesheets="@../Estilos/EstilosMenu.css">
+         <children>
+            <FontAwesomeIconView fill="WHITE" 
+                                 glyphName="TIMES" 
+                                 layoutX="711.0" 
+                                 layoutY="24.0" 
+                                 onMouseClicked="#Cerrar" 
+                                 size="30" />
+            <Label layoutX="17.0" 
+                   layoutY="1.0" 
+                   text="Historial de Solicitudes" 
+                   textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

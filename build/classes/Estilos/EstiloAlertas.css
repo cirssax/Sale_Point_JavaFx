@@ -1,0 +1,84 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18-05-2018, 12:07:55
+    Author     : Cristobal
+*/
+#Txt
+{
+    -fx-text-alignment: center;
+}
+
+
+/*PANEL ALERTA DE ERROR*/
+#Fondo
+{
+    -fx-background-color: #ff7961;
+}
+#BotonAceptar
+{
+    -fx-background-color: #f44336;
+}
+#PestAlertaError
+{
+    -fx-background-color: #ba000d;
+}
+
+
+/*PANEL DE ACCESO CORRECTO*/
+#FondoAccesoCorrecto
+{
+    -fx-background-color: #80e27d;
+}
+#BontonAccesoCorrecto
+{
+    -fx-background-color: #4caf4f;
+}
+#PestAlertaCorrecto
+{
+    -fx-background-color: #087f22;
+}
+
+
+/*PANEL DE SOLICITUD DE USUARIO ROOT*/
+#PanelUsuarioRoot
+{
+    -fx-background-color: #a7c0cd;
+}
+#BotonConfirmarRoot
+{
+    -fx-background-color: #78909c;
+}
+#TextoConfirmacion
+{
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}
+#PestUsrRoot
+{
+    -fx-background-color: #4b636e;
+}
+
+
+/*PANEL DE ACCESO SIMPLE*/
+#BotonAccesoSimple
+{
+    -fx-background-color: #4caf4f;
+    
+}
+#AccesoCorrectoSimple
+{
+    -fx-background-color: #80e27d;
+}
+#BuscarClienteCompras
+{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+#PestAlertaCorrectaSimple
+{
+    -fx-background-color: #087f22;
+}

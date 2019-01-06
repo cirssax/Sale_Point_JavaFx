@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="Fondo" 
+            prefHeight="204.0" 
+            prefWidth="295.0" 
+            stylesheets="@../Estilos/EstiloAlertas.css" 
+            xmlns="http://javafx.com/javafx/9.0.1" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="Alertas.AlertaDatoErroneoController">
+   <children>
+      <Label id="Txt" 
+             fx:id="Mensaje" 
+             layoutX="57.0" 
+             layoutY="39.0" 
+             prefHeight="93.0" 
+             prefWidth="189.0" 
+             stylesheets="@../Estilos/EstiloAlertas.css" 
+             textAlignment="CENTER" 
+             textFill="WHITE" 
+             wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXButton id="BotonAceptar" 
+                 fx:id="BotonAceptar" 
+                 layoutX="53.0" 
+                 layoutY="146.0" 
+                 onMouseClicked="#CerrarVentana" 
+                 prefHeight="37.0" 
+                 prefWidth="196.0" 
+                 stylesheets="@../Estilos/EstiloAlertas.css" 
+                 text="Aceptar" 
+                 textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane id="PestAlertaError" 
+                  layoutX="-1.0" 
+                  layoutY="-1.0" 
+                  prefHeight="25.0" 
+                  prefWidth="296.0" 
+                  stylesheets="@../Estilos/EstiloAlertas.css">
+         <children>
+            <Label layoutX="10.0" 
+                   layoutY="2.0" 
+                   text="Alerta" 
+                   textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" 
+                                 glyphName="EXCLAMATION_CIRCLE" 
+                                 layoutX="268.0" 
+                                 layoutY="20.0" 
+                                 size="20" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

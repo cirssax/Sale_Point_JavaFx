@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="FondoSolicitudProd" 
+            prefHeight="246.0" 
+            prefWidth="322.0" 
+            stylesheets="@../Estilos/EstilosMenu.css" 
+            xmlns="http://javafx.com/javafx/9.0.1" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="Distribuidor.SolicitudController">
+   <children>
+      <JFXTextField fx:id="TxtCantidad" 
+                    focusColor="BLACK" 
+                    labelFloat="true" 
+                    layoutX="107.0" 
+                    layoutY="77.0" 
+                    opacity="0.67" 
+                    prefHeight="39.0" 
+                    prefWidth="109.0" 
+                    promptText="Cantidad" 
+                    unFocusColor="BLACK">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton id="BtnConfirmarSol" 
+                 layoutX="109.0" 
+                 layoutY="159.0" 
+                 onMouseClicked="#Enviar" 
+                 stylesheets="@../Estilos/EstilosMenu.css" 
+                 text="Confirmar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane id="PestCantSol" 
+                  layoutY="-1.0" 
+                  prefHeight="27.0" 
+                  prefWidth="322.0" 
+                  stylesheets="@../Estilos/EstilosMenu.css">
+         <children>
+            <FontAwesomeIconView glyphName="TIMES" 
+                                 layoutX="293.0" 
+                                 layoutY="22.0" 
+                                 onMouseClicked="#Cerrar" 
+                                 size="25" />
+            <Label layoutX="5.0" 
+                   text="Cantidad de Producto a Solicitar">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

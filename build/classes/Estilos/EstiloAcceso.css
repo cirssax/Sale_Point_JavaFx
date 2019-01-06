@@ -1,0 +1,107 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16-05-2018, 20:43:37
+    Author     : Cristobal
+*/
+/*ESTILO PANELES*/
+#PanelAgregarUsr
+{
+    -fx-background-color: #52c7b7;
+}
+#PestSupModificar
+{
+    -fx-background-color: #029687;
+}
+
+
+#PanelFondo
+{
+    -fx-background-color: black;
+}
+
+
+#PanelAcceso
+{
+    -fx-background-color: #fbbf0a;
+}
+#PestSupAcceso
+{
+    -fx-background-color: #c38f00;
+}
+
+#PanelNuevoUsuario
+{
+    -fx-background-color: #90caf9; 
+}
+#PestSup
+{
+    -fx-text-alignment: right;
+}
+#PestSupNuevoUsuario
+{
+    -fx-background-color: #5d99c6;
+}
+
+
+#PanelLateral
+{
+    -fx-background-color: #2194f3;
+}
+#PanelIconos
+{
+    -fx-background-color: #0067c0;
+}
+/*ESTILO DEL PANEL ACCESO*/
+#BtnIngresUsuario
+{
+    -fx-background-color: #c38f00;
+    -fx-text-fill: black;
+}
+#Input
+{
+    -fx-text-fill: #000000;
+    -fx-prompt-text-fill: #000000;
+}
+/*ESTILOS DEL PANEL DE CREACION DE USUARIO*/
+#BtnCrearUsuario
+{
+    -fx-background-color: #5d99c6;
+    -fx-text-fill: #000000;
+}
+#InputCrear
+{
+    -fx-text-fill: #4d4d4d;
+    -fx-prompt-text-fill: #4d4d4d;
+}
+.comobo-box
+{
+    -fx-border-color: #000000;
+}
+.comobo-box:hover
+{
+    -fx-text-fill: #000000;
+}
+.comobo-box-base:hover
+{
+    -fx-text-fill: #000000;
+}
+.comobo-box .list-view
+{
+    -fx-border-color: #000000;
+}
+
+/*ESTILOS PARA EL AGREGAR USUARIOS*/
+#BuscarPorNombre
+{
+    -fx-prompt-text-fill: #000000;
+    -fx-text-fill: #000000;
+}
+#BtnSelecUsuario
+{
+    -fx-background-color: #00675a;
+    -fx-text-fill: #FFFFFF;
+}

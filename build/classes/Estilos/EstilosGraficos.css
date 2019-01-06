@@ -1,0 +1,78 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19-06-2018, 19:12:05
+    Author     : Cristobal
+*/
+#PanelSelector
+{
+    -fx-background-color: #ff6f00;
+}
+#BarraLatIzq
+{
+    -fx-background-color: #ffa040;
+}
+#BtnOpciones
+{
+    -fx-border-color: rgba(196, 62, 0, 0.1);
+    -fx-background-color: TRANSPARENT;
+}
+
+
+#PanelEstProd
+{
+    -fx-background-color: #0091ff;
+}
+#PestEstProductos
+{
+    -fx-background-color: #0064cb;
+}
+
+#PanelEstVendedores
+{
+    -fx-background-color: #91ff00;
+}
+#PestEstVendedores
+{
+    -fx-background-color: #57cb00;
+}
+
+#PanelTurnos
+{
+    -fx-background-color: #00ff6e;
+}
+#PestEstTurnos
+{
+    -fx-background-color: #00ca3d;
+}
+/*PANEL DE ESTADISTICA DE VENTA DE PRODUCTOS*/
+#ComboBoxes
+{
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}
+/*PANEL DE ESTADISTICA DE TRABAJADORES*/
+#BtnSeleccion
+{
+    -fx-background-color: #0064cb;
+    -fx-text-fill: white;
+}
+#BuscarTrabajador
+{
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}
+#BtnSelecTrabajador
+{
+    -fx-background-color: #57cb00;
+    -fx-text-fill: black;
+}
+/*PANEL DE TURNOS*/
+#InputNombreTurnos
+{
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}

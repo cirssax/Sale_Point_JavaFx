@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="PanelPagos" 
+            prefHeight="411.0" 
+            prefWidth="360.0" 
+            stylesheets="@../Estilos/EstilosMenu.css" 
+            xmlns="http://javafx.com/javafx/9.0.1" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="Comprador.PagarController">
+   <children>
+      <JFXButton id="BotonPago" 
+                 fx:id="PagoEfectivo" 
+                 layoutX="15.0" 
+                 layoutY="129.0" 
+                 onMouseClicked="#Pagar" 
+                 prefHeight="37.0" 
+                 prefWidth="136.0" 
+                 stylesheets="@../Estilos/EstilosMenu.css" 
+                 text="Pagar Efectivo" 
+                 textAlignment="CENTER" 
+                 textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="23.0" 
+             layoutY="75.0" 
+             prefHeight="25.0" 
+             prefWidth="119.0" 
+             text="Total a pagar: " 
+             textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="PagoTotal" 
+             layoutX="164.0" 
+             layoutY="75.0" 
+             prefHeight="25.0" 
+             prefWidth="146.0" 
+             textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXButton id="BotonPago" 
+                 fx:id="PagoTarjeta" 
+                 layoutX="204.0" 
+                 layoutY="129.0" 
+                 onMouseClicked="#PagarTarjeta" 
+                 prefHeight="37.0" 
+                 prefWidth="136.0" 
+                 stylesheets="@../Estilos/EstilosMenu.css" 
+                 text="Pagar Tarjeta" 
+                 textAlignment="CENTER" 
+                 textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField id="Montos" 
+                    fx:id="Dinero" 
+                    focusColor="WHITE" 
+                    labelFloat="true" 
+                    layoutX="90.0" 
+                    layoutY="198.0" 
+                    onKeyReleased="#Vuelto" 
+                    opacity="0.7" 
+                    promptText="Pago" 
+                    stylesheets="@../Estilos/EstilosMenu.css" 
+                    unFocusColor="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField id="Montos" 
+                    fx:id="Vuelto" 
+                    editable="false" 
+                    focusColor="WHITE" 
+                    labelFloat="true" 
+                    layoutX="90.0" 
+                    layoutY="276.0" 
+                    opacity="0.7" 
+                    promptText="Vuelto" 
+                    stylesheets="@../Estilos/EstilosMenu.css" 
+                    unFocusColor="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton id="BotonPago" 
+                 fx:id="Pagar" 
+                 layoutX="107.0" 
+                 layoutY="346.0" 
+                 onMouseClicked="#PagarEfectivo" 
+                 prefHeight="37.0" 
+                 prefWidth="146.0" 
+                 stylesheets="@../Estilos/EstilosMenu.css" 
+                 text="Pagar">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane id="PestPagos" 
+                  prefHeight="27.0" 
+                  prefWidth="360.0" 
+                  stylesheets="@../Estilos/EstilosMenu.css">
+         <children>
+            <Label layoutX="9.0" 
+                   layoutY="1.0" 
+                   text="Pago" 
+                   textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" 
+                                 glyphName="TIMES" 
+                                 layoutX="327.0" 
+                                 layoutY="22.0" 
+                                 onMouseClicked="#Cancelar" 
+                                 size="25" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

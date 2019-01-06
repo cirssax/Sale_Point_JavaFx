@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="FondoCompras" 
+            prefHeight="574.0" 
+            prefWidth="923.0" 
+            stylesheets="@../Estilos/EstilosMenu.css" 
+            xmlns="http://javafx.com/javafx/9.0.1" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="Producto.ComprasRealizadasController">
+   <children>
+      <JFXTreeTableView fx:id="TablaBusquedaCompras" 
+                        layoutX="12.0" 
+                        layoutY="146.0" 
+                        onMouseClicked="#BuscarDetalleCompra" 
+                        prefHeight="406.0" 
+                        prefWidth="611.0" 
+                        stylesheets="@../Estilos/EstiloTablaBusquedaProd.css" />
+      <JFXTextField id="BuscarClienteCompras" 
+                    fx:id="BuscarClienteCompras" 
+                    focusColor="WHITE" 
+                    labelFloat="true" 
+                    layoutX="23.0" 
+                    layoutY="102.0" 
+                    onKeyReleased="#BusqueadInstantenaCLientes" 
+                    opacity="0.85" 
+                    prefHeight="31.0" 
+                    prefWidth="282.0" 
+                    promptText="Buscar por nombre de cliente" 
+                    stylesheets="@../Estilos/EstiloAlertas.css" 
+                    unFocusColor="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTreeTableView fx:id="TablaDetalleCompra" 
+                        layoutX="626.0" 
+                        layoutY="146.0" 
+                        prefHeight="406.0" 
+                        prefWidth="282.0" 
+                        stylesheets="@../Estilos/EstiloTablaBusquedaProd.css" />
+      <AnchorPane id="BarraSupHistorialCompras" 
+                  layoutX="-1.0" 
+                  layoutY="-1.0" 
+                  prefHeight="27.0" 
+                  prefWidth="924.0" 
+                  stylesheets="@../Estilos/EstilosMenu.css">
+         <children>
+            <FontAwesomeIconView fill="WHITE" 
+                                 glyphName="TIMES" 
+                                 layoutX="896.0" 
+                                 layoutY="21.0" 
+                                 onMouseClicked="#Cerrar" 
+                                 opacity="0.8" size="25" />
+            <Label layoutX="7.0" 
+                   layoutY="-1.0" 
+                   text="Busqueda de Compras" 
+                   textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

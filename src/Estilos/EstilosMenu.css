@@ -1,0 +1,289 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16-05-2018, 20:43:45
+    Author     : Cristobal
+*/
+#Buton
+{
+    -fx-background-color: TRANSAPARENT;
+    -fx-text-fill: #000000;
+    -fx-border-color: rgba(255, 241, 81, 0.1);
+}
+#PanelIzq
+{
+    -fx-background-color: #fbbf0a;
+}
+#LatIzq
+{
+    -fx-background-color: #fff151;
+}
+
+
+#PanelPrincipal
+{
+    -fx-background-color: #89ff58;
+}
+#PestSupDescripciones
+{
+    -fx-background-color: #52cb1f;
+}
+
+
+#PanelVenta
+{
+    -fx-background-color: #795548;
+}
+#PestSupVentas
+{
+    -fx-background-color: #4b2c20;
+}
+
+
+#PanelSolicitud
+{
+    -fx-background-color: #52c7b7;
+}
+#PestSupSolicitud
+{
+    -fx-background-color: #029687;
+}
+
+
+#PanelBuscar
+{
+    -fx-background-color: #03a8f4;
+}
+#PestSupBusqueda
+{
+    -fx-background-color: #0079c1;
+}
+
+
+#PanelEstadistica
+{
+    -fx-background-color: #2B3A67;
+}
+#PestSupEstadistica
+{
+    -fx-background-color: #c43e00;
+}
+
+#PanelConsultas
+{
+    -fx-background-color: #3f51b5;
+}
+#PestSupConsultas
+{
+    -fx-background-color: #002984;
+}
+
+
+/*PANEL CONSULTAS Y FALLOS*/
+#DescripConsulta
+{
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}
+#BtnEnviarConsulta
+{
+    -fx-background-color: #002984;
+    -fx-text-fill: white;
+}
+
+
+/*PANEL PRINCIPAL*/
+#Descripciones
+{
+    -fx-background-color: TRANSPARENT;
+}
+
+
+/*PANEL VENTA*/
+#TotalAPagar
+{
+    -fx-text-alignment: right;
+}
+#CrearUsuario
+{
+    -fx-background-color: #4b2c20;
+    -fx-text-fill: #FFFFFF;
+}
+#BotonPago
+{
+    -fx-background-color: #A1887F;
+}
+#BuscarClienteCompra
+{
+    -fx-text-fill: #FFFFFF;
+    -fx-prompt-text-fill: #FFFFFF;
+}
+
+
+/*PANEL CREACION DE USUARIO*/
+#PanelFondoUsuario
+{
+    -fx-background-color: #769aa8;
+}
+#BotonCrearUsuario
+{
+    -fx-background-color: #486c79;
+    -fx-text-fill: white;
+}
+#DatosUsuario
+{
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}
+#PestCrearUsr
+{
+    -fx-background-color: #1c414d;
+}
+
+
+/*PANEL DE PAGOS*/
+#PanelPagos
+{
+    -fx-background-color: #a99c74;
+}
+#BotonPago
+{
+    -fx-background-color: #796e48;
+    -fx-text-fill: white;
+}
+#Montos
+{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+#PestPagos
+{
+    -fx-background-color: #4c4320;
+}
+
+/*PAGO CON TARJETA*/
+#FondoPagoTarjeta
+{
+    -fx-background-color: #ffffbc;
+}
+#BtnOperacionesTarjeta
+{
+    -fx-background-color: #a9ab5c;
+}
+#PestSuperiorPagoTarj
+{
+    -fx-background-color: #a9ab5c;
+}
+
+/*PANEL SOLICITUD*/
+#BtnSolicitudes
+{
+    -fx-background-color: #00675a;
+    -fx-text-fill: white;
+}
+#DatosSolicitud
+{
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}
+
+
+/*PANEL DE CANTIDAD DE SOLICITUD DE PRODUCTOS*/
+#FondoSolicitudProd
+{
+    -fx-background-color: #CDDC39;
+}
+#BtnConfirmarSol
+{
+    -fx-background-color: #98aa00;
+    -fx-text-fill: white;
+}
+#PestCantSol
+{
+    -fx-background-color: #98aa00;
+}
+
+
+/*PANEL AGREGAR DISTRIBUIDOR*/
+#FondoAgregarDistribuidor
+{
+    -fx-background-color: #c75262;
+}
+#FormularioDistribuidorNuevo
+{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+#BtnAgregarDistribuidorForm
+{
+    -fx-text-fill: white;
+    -fx-background-color: #922038;
+}
+#PestFormDistribuidor
+{
+    -fx-background-color: #922038;
+}
+
+
+/*PANEL BUSCAR*/
+#BtnOpcionesBusqueda
+{
+    -fx-background-color: #0079c1;
+    -fx-text-fill: white;
+}
+#BusquedaProducto
+{
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}
+
+
+/*CREACION DE NUEVO PRODUCTO*/
+#FondoNuevoProd
+{
+    -fx-background-color: #00a264;
+}
+#InputNuevoProd
+{
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}
+#PestSupProdu
+{
+    -fx-background-color: #007239;
+}
+#BtnSiguienteProdNuevo
+{
+    -fx-background-color: #007239;
+    -fx-text-fill: white;
+}
+
+
+/*Panel de busqueda de compras*/
+#FondoCompras
+{
+    -fx-background-color: #ff5622;
+}
+#BarraSupHistorialCompras
+{
+    -fx-background-color: #c41b00;
+}
+
+
+/*PANEL DE HISTORIAL DE SOLICITUDES*/
+#FondoHistSolicitudes
+{
+    -fx-background-color: #428f92;
+}
+#InputProdHistorialSolicitudes
+{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+#PestHistorialSol
+{
+    -fx-background-color: #00363a;
+}

@@ -1,0 +1,28 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22-08-2018, 8:48:01
+    Author     : cris_
+*/
+/*ESTILOS PARA EL PANEL DE CUADRAMIENTO DE CAJA*/
+#FondoPrincipal
+{
+    -fx-background-color: #fbbf0a;
+}
+#PestSuperior
+{
+    -fx-background-color: #c38f00;
+}
+#Botones
+{
+    -fx-background-color: #0a46fb;
+    -fx-text-fill: white;
+}
+#TxtCuadramientos
+{
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}
